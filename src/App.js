@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
@@ -14,10 +15,12 @@ class App extends Component {
     this.state = {open: false};
   }
   
+  handleClose = () => this.setState({open: false});
 
   render() {
     return (
-      <div className="App">
+      <BrowserRouter>
+        <div className="App">
          <AppBar
         title="Title"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
@@ -28,10 +31,47 @@ class App extends Component {
           docked={false}
           onRequestChange={(open) => this.setState({open})}
           >
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+          
+            <Link to='/'><MenuItem onTouchTap={this.handleClose}>Home
+          </MenuItem></Link>
+
+            <Link to='/about'><MenuItem onTouchTap={this.handleClose}>About
+          </MenuItem></Link>
+
+          
+            <Link to='/work'><MenuItem onTouchTap={this.handleClose}>Work
+          </MenuItem></Link>
+
+          
+            <Link to='/contact'><MenuItem onTouchTap={this.handleClose}>Contact
+          </MenuItem></Link>
         </Drawer>
+
+        <Route 
+          exact 
+          path='/' 
+          render={() => <h1>Home View</h1>} />
+        <Route 
+          exact 
+          path='/about' 
+          render={() => <h1>About</h1>} 
+        />
+
+        <Route 
+          exact 
+          path='/work' 
+          render={() => <h1>Work</h1>} 
+        />
+
+        <Route 
+          exact 
+          path='/contact' 
+          render={() => <h1>Contact</h1>} 
+        />
+
       </div>
+      </BrowserRouter>
+      
     );
   }
 }
