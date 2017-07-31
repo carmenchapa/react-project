@@ -6,6 +6,14 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+/* views */
+import Home from './views/Home'
+import About from './views/About'
+import Work from './views/Work'
+import Contact from './views/Contact'
+
+
 injectTapEventPlugin();
 
 class App extends Component {
@@ -22,7 +30,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
          <AppBar
-        title="Title"
+        title="Carmen"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
         onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}
         />
@@ -50,23 +58,23 @@ class App extends Component {
         <Route 
           exact 
           path='/' 
-          render={() => <h1>Home View</h1>} />
+          component={Home} />
         <Route 
           exact 
           path='/about' 
-          render={() => <h1>About</h1>} 
+          component={About} 
         />
 
         <Route 
           exact 
           path='/work' 
-          render={() => <h1>Work</h1>} 
+          component={Work} 
         />
 
         <Route 
           exact 
           path='/contact' 
-          render={() => <h1>Contact</h1>} 
+          component={Contact} 
         />
 
       </div>
