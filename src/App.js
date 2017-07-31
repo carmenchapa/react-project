@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+/* Material-ui */
+// import { MuiThemeProvider } from 'Material-ui/styles';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+// import createMuiTheme from 'material-ui/styles/theme'
+// import createPalette from 'material-ui/styles/palette'
+// import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import carTheme from './carTheme';
+import SideNav from './SideNav';
+
+/* Import Views */
+import Home from './views/Home';
+import About from './views/About';
+import Work from './views/Work';
+import Contact from './views/Contact';
+
+
 injectTapEventPlugin();
 
 class App extends Component {
@@ -20,56 +33,19 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-         <AppBar
-        title="Title"
-        iconClassNameRight="muidocs-icon-navigation-expand-more"
-        onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}
-        />
-        <Drawer
-          open={this.state.open}
-          docked={false}
-          onRequestChange={(open) => this.setState({open})}
-          >
-          
-            <NavLink activeClassName='active' exact to='/'><MenuItem onTouchTap={this.handleClose}>Home
-          </MenuItem></NavLink>
+        <MuiThemeProvider theme={carTheme}>
+          <div>
+            <SideNav />
 
-            <NavLink activeClassName='active' to='/about'><MenuItem onTouchTap={this.handleClose}>About
-          </MenuItem></NavLink>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/about' component={About} />
+              <Route path='/work' component={Work} />
+              <Route path='/contact' component={Contact} />
+            </Switch>
+          </div>
+        </MuiThemeProvider>
 
-          
-            <NavLink activeClassName='active' to='/work'><MenuItem onTouchTap={this.handleClose}>Work
-          </MenuItem></NavLink>
-
-          
-            <NavLink activeClassName='active' to='/contact'><MenuItem onTouchTap={this.handleClose}>Contact
-          </MenuItem></NavLink>
-        </Drawer>
-
-        <Route 
-          exact 
-          path='/' 
-          render={() => <h1>Home View</h1>} />
-        <Route 
-          exact 
-          path='/about' 
-          render={() => <h1>About</h1>} 
-        />
-
-        <Route 
-          exact 
-          path='/work' 
-          render={() => <h1>Work</h1>} 
-        />
-
-        <Route 
-          exact 
-          path='/contact' 
-          render={() => <h1>Contact</h1>} 
-        />
-
-      </div>
       </BrowserRouter>
       
     );
