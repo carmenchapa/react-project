@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import './styles/materialize-grid.css'
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+import { BrowserRouter, Route } from 'react-router-dom';
+// import AppBar from 'material-ui/AppBar';
+// import Drawer from 'material-ui/Drawer';
+// import MenuItem from 'material-ui/MenuItem';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import SideNav from './components/SideNav'
 
 /* views */
 import Home from './views/Home'
@@ -30,7 +32,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-         <AppBar
+
+         <SideNav />
+        {/* } <AppBar
         title="Carmen"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
         onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}
@@ -81,6 +85,7 @@ class App extends Component {
                 </MenuItem>
             </NavLink>
         </Drawer>
+      */}
 
         <Route 
           exact 

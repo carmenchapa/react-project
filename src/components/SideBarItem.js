@@ -8,6 +8,7 @@ class SideBarItem extends Component {
 		this.state = { open: false}
 	}
 
+
 	render() {
 		return (
 			<NavLink
