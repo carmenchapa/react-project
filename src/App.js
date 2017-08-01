@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import './styles/materialize-grid.css'
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -40,19 +41,45 @@ class App extends Component {
           onRequestChange={(open) => this.setState({open})}
           >
           
-            <NavLink activeClassName='active' exact to='/'><MenuItem onTouchTap={this.handleClose}>Home
-          </MenuItem></NavLink>
+            <NavLink 
+              activeClassName='active' 
+              exact to='/'
+            >
+              <MenuItem 
+                onTouchTap={this.handleClose}>
+                Home
+              </MenuItem>
+            </NavLink>
 
-            <NavLink activeClassName='active' to='/about'><MenuItem onTouchTap={this.handleClose}>About
-          </MenuItem></NavLink>
+            <NavLink
+              activeClassName='active' 
+              to='/about'
+            >
+                <MenuItem  
+                  onTouchTap={this.handleClose}>
+                  About
+                </MenuItem>
+                </NavLink>
 
           
-            <NavLink activeClassName='active' to='/work'><MenuItem onTouchTap={this.handleClose}>Work
-          </MenuItem></NavLink>
+            <NavLink 
+              activeClassName='active' 
+                to='/work'>
+                  <MenuItem 
+                    onTouchTap={this.handleClose}>
+                    Work
+                  </MenuItem>
+            </NavLink>
 
           
-            <NavLink activeClassName='active' to='/contact'><MenuItem onTouchTap={this.handleClose}>Contact
-          </MenuItem></NavLink>
+            <NavLink 
+              activeClassName='active'  
+              to='/contact'>
+                <MenuItem 
+                  onTouchTap={this.handleClose}>
+                  Contact
+                </MenuItem>
+            </NavLink>
         </Drawer>
 
         <Route 
