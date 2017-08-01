@@ -24,6 +24,14 @@ const links = [
   //   text: 'Service Request Form'
   // }
 ]
+
+
+const burgerStyle = {
+    position: 'absolute',
+    right: '0px'
+}
+
+
 class SideNav extends Component {
   constructor (props) {
     super(props)
@@ -40,10 +48,13 @@ class SideNav extends Component {
         <AppBar
           title='Carmen'
           iconClassNameRight='muidocs-icon-navigation-expand-more'
-          onLeftIconButtonTouchTap={() =>
+          iconStyleLeft={burgerStyle}
+          // iconElementLeft='muidocs-icon-navigation-expand-more'
+          onRightIconButtonTouchTap={() =>
             this.setState({ open: !this.state.open })}
         />
         <Drawer
+          openSecondary={true}
           open={this.state.open}
           docked={false}
           onRequestChange={open => this.setState({ open })}
