@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import './styles/materialize-grid.css'
+import './styles/responsive-text.css'
 import { BrowserRouter, Route } from 'react-router-dom';
-// import AppBar from 'material-ui/AppBar';
-// import Drawer from 'material-ui/Drawer';
-// import MenuItem from 'material-ui/MenuItem';
+
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import SideNav from './components/SideNav'
@@ -34,58 +33,6 @@ class App extends Component {
         <div className="App">
 
          <SideNav />
-        {/* } <AppBar
-        title="Carmen"
-        iconClassNameRight="muidocs-icon-navigation-expand-more"
-        onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}
-        />
-        <Drawer
-          open={this.state.open}
-          docked={false}
-          onRequestChange={(open) => this.setState({open})}
-          >
-          
-            <NavLink 
-              activeClassName='active' 
-              exact to='/'
-            >
-              <MenuItem 
-                onTouchTap={this.handleClose}>
-                Home
-              </MenuItem>
-            </NavLink>
-
-            <NavLink
-              activeClassName='active' 
-              to='/about'
-            >
-                <MenuItem  
-                  onTouchTap={this.handleClose}>
-                  About
-                </MenuItem>
-                </NavLink>
-
-          
-            <NavLink 
-              activeClassName='active' 
-                to='/work'>
-                  <MenuItem 
-                    onTouchTap={this.handleClose}>
-                    Work
-                  </MenuItem>
-            </NavLink>
-
-          
-            <NavLink 
-              activeClassName='active'  
-              to='/contact'>
-                <MenuItem 
-                  onTouchTap={this.handleClose}>
-                  Contact
-                </MenuItem>
-            </NavLink>
-        </Drawer>
-      */}
 
         <Route 
           exact 

@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
-import {yellow500} from 'material-ui/styles/colors';
 
+const cardStyles = {
+		padding: '20px',
+		boxShadow: 'none'
+}
 
 const iconStyles = {
 		  marginRight: 24,
+		  fontSize: '3rem'
 	};
 
 
@@ -17,7 +21,8 @@ class Cards extends Component {
 
 		return (
 		
-					<Card>
+					<Card
+						style={cardStyles}>
 					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
 					    <CardHeader
 					      title="URL Avatar"
@@ -27,7 +32,8 @@ class Cards extends Component {
 					      <FontIcon 
 					      	className="material-icons" 
 					      	style={iconStyles} 
-					      	color={yellow500}>cloud_download
+					      	color={this.props.color}>{this.props.icon}
+
 					      </FontIcon>
 					    </CardMedia>
 					    <CardTitle title="Card title" subtitle="Card subtitle" />

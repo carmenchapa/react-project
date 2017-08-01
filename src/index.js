@@ -8,11 +8,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 const muiTheme = getMuiTheme({
   palette: {
-    // textColor: '#21412a',
     primary1Color: '#FFC400',
   },
   appBar: {
-    height: 50,
+    height: 55,
   },
 });
 
