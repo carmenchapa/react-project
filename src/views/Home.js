@@ -22,6 +22,7 @@ class Home extends Component {
 					<Cards
 						color={yellow500}
 						icon='cloud_download'
+						
 						>	
 					</Cards>
 				</div>
@@ -29,13 +30,15 @@ class Home extends Component {
 					<Cards
 						color={yellow500}
 						icon='graphic_eq'
+						
 					>	
 					</Cards>
 				</div>
 				<div className="col s12 m4">
 					<Cards
 						color={yellow500}
-						icon='location_searching'>	
+						icon='location_searching'
+						>	
 					</Cards>
 				</div>
 			</div>
@@ -43,19 +46,22 @@ class Home extends Component {
 				<div className="col s12 m4">
 					<Cards
 						color={yellow500}
-						icon='cloud_download'>	
+						icon='cloud_download'
+						>	
 					</Cards>
 				</div>
 				<div className="col s12 m4">
 					<Cards
 						color={yellow500}
-						icon='cloud_download'>	
+						icon='cloud_download'
+						>	
 					</Cards>
 				</div>
 				<div className="col s12 m4">
 					<Cards
 						color={yellow500}
-						icon='cloud_download'>	
+						icon='cloud_download'
+						>	
 					</Cards>
 				</div>
 			</div>

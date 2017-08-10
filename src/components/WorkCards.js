@@ -12,7 +12,7 @@ class WorkCards extends Component {
 		return (
 		
 					<Card>
-					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+					
 					    
 					    <CardMedia>
 					      <img src={this.props.image} alt={this.props.alt}  />
