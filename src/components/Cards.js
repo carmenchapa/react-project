@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
@@ -17,7 +17,15 @@ const iconStyles = {
 const iconButtonStyles = {
 	paddingLeft: '0',
 	textAlign: 'left',
-    top: '7px'
+    top: '6px'
+}
+
+const tooltipStyles = {
+	left: '-4px',
+}
+
+const likesStyle = {
+	marginRight: '3px'
 }
 
 
@@ -50,11 +58,12 @@ class Cards extends Component {
 					    <CardActions>
 					     
 					      <FlatButton label="Action" />
-					      <span>0</span>
+					      <span style={likesStyle}>0</span>
   
 					      <IconButton 
-						      tooltip="bottom-center"
+						      tooltip="like"
 						      tooltipPosition="bottom-center"
+						      tooltipStyles={tooltipStyles}
 						      style={iconButtonStyles}
 						    >
 						    <FontIcon
