@@ -3,6 +3,8 @@ import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Car
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
+import data from '../data/cards.json'
+
 
 const cardStyles = {
 		padding: '20px',
@@ -29,15 +31,12 @@ const likesStyle = {
 }
 
 
-class Cards extends Component {
+let Cards = class Cards extends Component {
 	
-	state = {}
-
-
-	render () {
-
+	//  state = {}
+	createCard (card) {
 		return (
-		
+
 					<Card
 						style={cardStyles}>
 					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
@@ -45,16 +44,13 @@ class Cards extends Component {
 					    <div>
 					      <FontIcon 
 					      	className="material-icons" 
-					      	style={iconStyles} 
-					      	color={this.props.color}>{this.props.icon}
+					      	style={iconStyles} >{card.icon}
 
 					      </FontIcon>
 					      </div>
 					    </CardMedia>
 					    <CardTitle title="Card title" subtitle="Card subtitle" />
-					    <CardText>
-					      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					    </CardText>
+					    <CardText>{card.caption}</CardText>
 					    <CardActions>
 					     
 					      <FlatButton label="Action" />
@@ -67,17 +63,29 @@ class Cards extends Component {
 						      style={iconButtonStyles}
 						    >
 						    <FontIcon
-							    className="material-icons"
-							    
-					      		color={this.props.color}>favorite
+							    className="material-icons">favorite
 				      		 </FontIcon>
 						  </IconButton>
 						  >
 						   
 					    </CardActions>
 					</Card>
-				
-		)
+			)
+	}
+
+	createCards(cards) {
+    return cards.map(this.createCard);
+  }
+
+	render () {
+
+		return (
+			<div className="container">
+		        <div className="row">           
+				            {this.createCards(data.cards)}		        
+		        </div>
+		      </div>
+			)
 		
 	}
 }

@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+// import { Route } from 'react-router-dom';
 import {Card, CardActions, CardMedia, CardTitle} from 'material-ui/Card';
 import Image from '../components/AboutImage.js'
+import ButtonProjects from '../components/ButtonProjects.js'
 
 import data from '../data/about.json'
 const cardStyles = {
 		padding: '20px',
-		paddingTop: '10px',
+		marginTop: '40px',
 		boxShadow: 'none',
 		border: '1px solid #EEEEEE'
 }
@@ -16,12 +19,25 @@ let About = class Work extends Component {
  //    	this.createImage = this.createImage.bind(this);
  //    	this.createImages = this.createImages.bind(this);  
  //  	}
+ //<Route path="https://unsplash.it/images"/>
 
-
-
-// let About = React.createClass({
   createImage(image) {
-    return (<div className="col s12 m3" key={image}><Card style={cardStyles}><CardMedia><Image source={image}/></CardMedia><CardTitle subtitle={"title"} /></Card></div>)
+    return (
+    	<div className="col s12 m4 l3" key={image.src}>
+    		<Card style={cardStyles}>
+    			<CardMedia>
+    				<Image source={image.src}/>
+    			</CardMedia>
+	    		<CardTitle subtitle={image.name} />
+	    		<CardActions>
+	    			<Link to={`/view/${image.code}`}>
+	    			<ButtonProjects id='buttonAbout'  backgroundColor="#FFC400"  label="view" labelColor='#fff' />
+	    			</Link>
+	    			
+	    		</CardActions>
+	    	</Card>
+	    </div>
+	    )
   }
 
   createImages(images) {
@@ -32,7 +48,7 @@ let About = class Work extends Component {
     return (
       <div className="container">
         <div className="row">           
-		            {this.createImages(data.images)}		        
+		            {this.createImages(data.images, data.names)}		        
         </div>
       </div>
     );
