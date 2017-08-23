@@ -20,44 +20,12 @@ class Home extends Component {
 			<div className="col s12 m2"></div>
 			</div>
 			<div className="row">
-				<div className="col s12 m4">
 					<Cards
+						
 						color={yellow500}
 						>	
 					</Cards>
-				</div>
-				<div className="col s12 m4">
-					<Cards
-						color={yellow500}	
-					>	
-					</Cards>
-				</div>
-				<div className="col s12 m4">
-					<Cards
-						color={yellow500}
-						>	
-					</Cards>
-				</div>
-			</div>
-			<div className="row">
-				<div className="col s12 m4">
-					<Cards
-						color={yellow500}
-						>	
-					</Cards>
-				</div>
-				<div className="col s12 m4">
-					<Cards
-						color={yellow500}
-						>	
-					</Cards>
-				</div>
-				<div className="col s12 m4">
-					<Cards
-						color={yellow500}
-						>	
-					</Cards>
-				</div>
+				
 			</div>
 		</div>
 		)

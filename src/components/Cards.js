@@ -37,6 +37,7 @@ let Cards = class Cards extends Component {
 	createCard (card) {
 		return (
 
+					<div className="col s12 m6 l4" key={card.code}>
 					<Card
 						style={cardStyles}>
 					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
@@ -49,13 +50,15 @@ let Cards = class Cards extends Component {
 					      </FontIcon>
 					      </div>
 					    </CardMedia>
-					    <CardTitle title="Card title" subtitle="Card subtitle" />
+					    <CardTitle title={card.title} subtitle={card.subtitle} />
 					    <CardText>{card.caption}</CardText>
 					    <CardActions>
 					     
 					      <FlatButton label="Action" />
+					      <div>
 					      <span style={likesStyle}>0</span>
   
+					      
 					      <IconButton 
 						      tooltip="like"
 						      tooltipPosition="bottom-center"
@@ -66,10 +69,12 @@ let Cards = class Cards extends Component {
 							    className="material-icons">favorite
 				      		 </FontIcon>
 						  </IconButton>
+						  </div>
 						  >
 						   
 					    </CardActions>
 					</Card>
+					</div>
 			)
 	}
 
