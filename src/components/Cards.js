@@ -16,6 +16,10 @@ const iconStyles = {
 		  fontSize: '3rem'
 	};
 
+const likeStyles = {
+		  fontSize: '3rem'
+	};
+
 const iconButtonStyles = {
 	paddingLeft: '0',
 	textAlign: 'left',
@@ -38,14 +42,14 @@ let Cards = class Cards extends Component {
 		return (
 
 					<div className="col s12 m6 l4" key={card.code}>
-					<Card
-						style={cardStyles}>
-					<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+					<Card style={cardStyles}>
 					    <CardMedia>
 					    <div>
 					      <FontIcon 
 					      	className="material-icons" 
-					      	style={iconStyles} >{card.icon}
+					      	color="#FFC400"
+					      	style={iconStyles} 
+					      >{card.icon}
 
 					      </FontIcon>
 					      </div>
@@ -58,20 +62,21 @@ let Cards = class Cards extends Component {
 					      <div>
 					      <span style={likesStyle}>0</span>
   
-					      
 					      <IconButton 
+
 						      tooltip="like"
 						      tooltipPosition="bottom-center"
 						      tooltipStyles={tooltipStyles}
 						      style={iconButtonStyles}
 						    >
 						    <FontIcon
-							    className="material-icons">favorite
+							    className="material-icons"
+							    color="grey"
+							    style={iconStyles}
+							 >favorite
 				      		 </FontIcon>
 						  </IconButton>
-						  </div>
-						  >
-						   
+						  </div>   
 					    </CardActions>
 					</Card>
 					</div>

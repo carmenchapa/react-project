@@ -20,6 +20,7 @@ class Home extends Component {
 			<div className="col s12 m2"></div>
 			</div>
 			<div className="row">
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
 					<Cards
 						
 						color={yellow500}

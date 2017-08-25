@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
+// import AppBarSubComponent from './AppBarSubComponent'
+import {Tabs, Tab} from 'material-ui/Tabs'
 import Drawer from 'material-ui/Drawer'
 import SideBarItem from './SideBarItem'
 import { List } from 'material-ui/List'
@@ -18,17 +20,21 @@ const links = [
   { isExact: false, linkTo: '/about', text: 'About' },
   { isExact: false, linkTo: '/work', text: 'Work' },
   { isExact: false, linkTo: '/contact', text: 'Contact' }
-  // {
-  //   isExact: false,
-  //   linkTo: '/service-request-form',
-  //   text: 'Service Request Form'
-  // }
-]
 
+]
 
 const burgerStyle = {
     position: 'absolute',
     right: '0px'
+}
+
+const tabStyle = {
+  width: '35%',
+  paddingLeft: '65%'
+}
+
+const inkBarStyle = {
+  backgroundColor:'#fff'
 }
 
 
@@ -46,13 +52,21 @@ class SideNav extends Component {
       <div>
       
         <AppBar
-          title='Carmen'
+          title={
+            <Tabs onChange={this.onChangeTabs} style={tabStyle} inkBarStyle={inkBarStyle}>
+              <Tab label="about" />
+              <Tab label="work" />
+              <Tab label="contact" />
+            </Tabs>
+          }
           iconClassNameRight='muidocs-icon-navigation-expand-more'
           iconStyleLeft={burgerStyle}
           // iconElementLeft='muidocs-icon-navigation-expand-more'
           onRightIconButtonTouchTap={() =>
             this.setState({ open: !this.state.open })}
-        />
+        >
+            
+        </AppBar>
         <Drawer
           openSecondary={true}
           open={this.state.open}

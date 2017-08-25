@@ -16,6 +16,8 @@ import Work from './views/Work'
 import Contact from './views/Contact'
 
 
+
+
 injectTapEventPlugin();
 
 class App extends Component {
@@ -32,7 +34,9 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
 
-         <SideNav />
+         
+
+           <SideNav />
 
         <Route 
           exact 

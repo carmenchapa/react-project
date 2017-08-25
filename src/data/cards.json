@@ -5,7 +5,7 @@
 			"title": "Coding",
 			"subtitle": "Front End engineer",
 			"caption":"Javascipt developer",
-			"icon":"cloud_download",
+			"icon":"code",
 			"likes":"0"
 		},
 		{
@@ -13,7 +13,7 @@
 			"title": "UI/UX",
 			"subtitle": "Web layouts design",
 			"caption": "Visual designer",
-			"icon": "graphic_eq",
+			"icon": "view_compact",
 			"likes": "0"
 		},
 		{
@@ -21,7 +21,7 @@
 			"title": "Prototyping",
 			"subtitle": "Front End engineer",
 			"caption": "Framer, Sketch, Marvel",
-			"icon": "location_searching",
+			"icon": "smartphone",
 			"likes": "0"
 		},
 		{
@@ -37,7 +37,7 @@
 			"title": "Motion",
 			"subtitle": "Javascript motion graphics",
 			"caption": "Canvas HTML5, CreateJS, Greenshock",
-			"icon":"cloud_download",
+			"icon":"theaters",
 			"likes": "0"
 		},
 		{
