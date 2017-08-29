@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
 // import AppBarSubComponent from './AppBarSubComponent'
 import {Tabs, Tab} from 'material-ui/Tabs'
@@ -30,12 +31,17 @@ const burgerStyle = {
 
 const tabStyle = {
   width: '35%',
-  paddingLeft: '65%'
+  paddingLeft: '65%',
+  paddingTop: '3px'
 }
 
 const inkBarStyle = {
   backgroundColor:'#fff'
 }
+
+// function handleActive(tab) {
+//   alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
+// }
 
 
 class SideNav extends Component {
@@ -45,7 +51,9 @@ class SideNav extends Component {
   }
 
 
-  handleClose = () => this.setState({ open: false })
+  handleClose = () => this.setState({ open: false });
+
+  // handleActive = (tab) => alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
 
   render () {
     return (
@@ -54,9 +62,9 @@ class SideNav extends Component {
         <AppBar
           title={
             <Tabs onChange={this.onChangeTabs} style={tabStyle} inkBarStyle={inkBarStyle}>
-              <Tab label="about" />
-              <Tab label="work" />
-              <Tab label="contact" />
+              <Tab label="about" containerElement={<Link to="/about" />} />
+              <Tab label="work" data-route="/work"  containerElement={<Link to="/work" />} />
+              <Tab label="contact" containerElement={<Link to="/contact" />} />
             </Tabs>
           }
           iconClassNameRight='muidocs-icon-navigation-expand-more'
