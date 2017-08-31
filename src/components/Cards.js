@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
+import LikeIconButton from './LikeIconButton';
 import data from '../data/cards.json'
 
 
@@ -13,31 +13,23 @@ const cardStyles = {
 }
 
 const iconStyles = {
-		  fontSize: '3rem'
-	};
+		  fontSize: '4rem'
+	}
 
-const likeStyles = {
-		  fontSize: '3rem'
-	};
-
-const iconButtonStyles = {
-	paddingLeft: '0',
-	textAlign: 'left',
-    top: '6px'
+const actionButton = {
+	marginLeft: '8px'
 }
 
-const tooltipStyles = {
-	left: '-4px',
-}
 
-const likesStyle = {
-	marginRight: '3px'
-}
+
+
 
 
 let Cards = class Cards extends Component {
 	
 	//  state = {}
+
+	hoveredStyle = () => this.setState({open: false});
 	createCard (card) {
 		return (
 
@@ -56,27 +48,9 @@ let Cards = class Cards extends Component {
 					    </CardMedia>
 					    <CardTitle title={card.title} subtitle={card.subtitle} />
 					    <CardText>{card.caption}</CardText>
-					    <CardActions>
-					     
-					      <FlatButton label="Action" />
-					      <div>
-					      <span style={likesStyle}>0</span>
-  
-					      <IconButton 
-
-						      tooltip="like"
-						      tooltipPosition="bottom-center"
-						      tooltipStyles={tooltipStyles}
-						      style={iconButtonStyles}
-						    >
-						    <FontIcon
-							    className="material-icons"
-							    color="grey"
-							    style={iconStyles}
-							 >favorite
-				      		 </FontIcon>
-						  </IconButton>
-						  </div>   
+					    <CardActions> 
+					      <FlatButton label="Action" style={actionButton} />
+					      <LikeIconButton color="#9e9e9e" hoverColor="#ef9a9a" />    
 					    </CardActions>
 					</Card>
 					</div>

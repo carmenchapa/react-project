@@ -55,7 +55,15 @@ const ButtonProjects = ({ id, backgroundColor, labelColor }) => {
 
           `}
         </style>
-        <RaisedButton id={id} disableTouchRipple={false} style={buttonStyle} overlayStyle={overlayStyle}  backgroundColor={labelColor} labelColor={backgroundColor} className="test">VIEW</RaisedButton>
+        <RaisedButton
+          id={id}
+          disableTouchRipple={false}
+          style={buttonStyle}
+          overlayStyle={overlayStyle}
+          backgroundColor={labelColor}
+          labelColor={backgroundColor}
+          className="test">VIEW
+        </RaisedButton>
       </div>  
   );
 };

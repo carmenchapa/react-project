@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Cards from '../components/Cards'
 import {yellow500} from 'material-ui/styles/colors';
 
-import data from '../data/about.json'
+// import data from '../data/about.json'
 
 
 
@@ -21,11 +21,7 @@ class Home extends Component {
 			</div>
 			<div className="row">
 			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-					<Cards
-						
-						color={yellow500}
-						>	
-					</Cards>
+					<Cards color={yellow500}></Cards>
 				
 			</div>
 		</div>
