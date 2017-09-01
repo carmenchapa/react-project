@@ -74,28 +74,13 @@ class SideNav extends Component {
           iconElementRight={ 
             <div>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-            <style>
-              {`
-                  @media only screen and (max-width: 600px) {
-                    #burgueer {
-                      display: block !important;
-                    }
-                  }
-
-                  @media only screen and (min-width: 601px) {
-                    #burgueer {
-                      display: none !important;
-                    }
-                  }
-                
-                `}
-            </style> 
+            
             <IconButton  
-              id="burgueer"     
+                  
               onTouchTap={ () =>
             this.setState({ open: !this.state.open }) }
               > 
-                <FontIcon className="material-icons" color="white">menu</FontIcon>
+                <FontIcon className="material-icons hide-on-med-and-up" color="white">menu</FontIcon>
               </IconButton>
               </div>
           }
