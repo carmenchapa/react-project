@@ -5,6 +5,9 @@ import AppBar from 'material-ui/AppBar'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import Drawer from 'material-ui/Drawer'
 import SideBarItem from './SideBarItem'
+import IconButton from 'material-ui/IconButton';
+// import ActionHome from 'material-ui/svg-icons/action/home';
+import FontIcon from 'material-ui/FontIcon';
 import { List } from 'material-ui/List'
 
 
@@ -68,13 +71,43 @@ class SideNav extends Component {
               <Tab label="contact" containerElement={<Link to="/contact" />} />
             </Tabs>
           }
-          iconClassNameRight='show-on-small'
-          
           
           iconStyleLeft={burgerStyle}
+          showMenuIconButton={false}
+          
+          iconElementRight={ 
+            <div>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+            <style>
+              {`
+                  @media only screen and (max-width: 600px) {
+                    #burgueer {
+                      display: block !important;
+                    }
+                  }
+
+                  @media only screen and (min-width: 601px) {
+                    #burgueer {
+                      display: none !important;
+                    }
+                  }
+                
+                `}
+            </style> 
+
+            <IconButton  
+              id="burgueer"  
+               
+              onTouchTap={ () =>
+            this.setState({ open: !this.state.open }) }
+              > 
+                <FontIcon className="material-icons" color="white">menu</FontIcon>
+              </IconButton>
+              </div>
+          }
           // iconElementLeft='muidocs-icon-navigation-expand-more'
-          onRightIconButtonTouchTap={() =>
-            this.setState({ open: !this.state.open })}
+          // onRightIconButtonTouchTap={() =>
+          //   this.setState({ open: !this.state.open })}
         >
             
         </AppBar>
