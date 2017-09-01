@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import './styles/materialize-grid.css'
+import './styles/materialize-mediaqueries.css'
 import './styles/responsive-text.css'
 import { BrowserRouter, Route } from 'react-router-dom';
 

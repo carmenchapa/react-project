@@ -50,7 +50,6 @@ const LikeIconButton = ({ color="grey", hoverColor="#ef9a9a" }) => {
 	    	<Favorite 
 	    	color={color} 
 	    	hoverColor="#ef9a9a"
-	    	tooltip="like"
 		    style={iconButtonStyles}
 	      />
    		{/*</IconButton>*/}

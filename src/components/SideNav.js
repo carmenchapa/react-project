@@ -60,14 +60,17 @@ class SideNav extends Component {
       <div>
       
         <AppBar
+        
           title={
-            <Tabs onChange={this.onChangeTabs} style={tabStyle} inkBarStyle={inkBarStyle}>
+            <Tabs className='hide-on-small-only' onChange={this.onChangeTabs} style={tabStyle} inkBarStyle={inkBarStyle}>
               <Tab label="about" containerElement={<Link to="/about" />} />
               <Tab label="work" data-route="/work"  containerElement={<Link to="/work" />} />
               <Tab label="contact" containerElement={<Link to="/contact" />} />
             </Tabs>
           }
-          iconClassNameRight='muidocs-icon-navigation-expand-more'
+          iconClassNameRight='show-on-small'
+          
+          
           iconStyleLeft={burgerStyle}
           // iconElementLeft='muidocs-icon-navigation-expand-more'
           onRightIconButtonTouchTap={() =>
