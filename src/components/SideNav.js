@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
-// import AppBarSubComponent from './AppBarSubComponent'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import Drawer from 'material-ui/Drawer'
 import SideBarItem from './SideBarItem'
@@ -9,8 +8,6 @@ import IconButton from 'material-ui/IconButton';
 // import ActionHome from 'material-ui/svg-icons/action/home';
 import FontIcon from 'material-ui/FontIcon';
 import { List } from 'material-ui/List'
-
-
 
 /*
   Add you nav links here..
@@ -73,8 +70,7 @@ class SideNav extends Component {
           }
           
           iconStyleLeft={burgerStyle}
-          showMenuIconButton={false}
-          
+          showMenuIconButton={false}     
           iconElementRight={ 
             <div>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
@@ -94,10 +90,8 @@ class SideNav extends Component {
                 
                 `}
             </style> 
-
             <IconButton  
-              id="burgueer"  
-               
+              id="burgueer"     
               onTouchTap={ () =>
             this.setState({ open: !this.state.open }) }
               > 
