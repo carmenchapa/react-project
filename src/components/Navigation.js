@@ -9,12 +9,6 @@ import IconButton from 'material-ui/IconButton';
 import FontIcon from 'material-ui/FontIcon';
 import { List } from 'material-ui/List'
 
-/*
-  Add you nav links here..
-    isExact: if true it will be an exact path
-    linkTo: the path you want to go
-    text: title of the nav item
-*/
 
 const links = [
   { isExact: true, linkTo: '/', text: 'Home' },
@@ -30,8 +24,8 @@ const burgerStyle = {
 }
 
 const tabStyle = {
-  width: '35%',
-  paddingLeft: '65%',
+  width: '45%',
+  paddingLeft: '55%',
   paddingTop: '3px'
 }
 
@@ -39,54 +33,37 @@ const inkBarStyle = {
   backgroundColor:'#fff'
 }
 
-// function handleActive(tab) {
-//   alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
-// }
-
-
-class SideNav extends Component {
+class Navigation extends Component {
   constructor (props) {
     super(props)
     this.state = {open: false }
   }
 
-
   handleClose = () => this.setState({ open: false });
-
-  // handleActive = (tab) => alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
 
   render () {
     return (
       <div>
-      
-        <AppBar
-        
+
+        <AppBar        
           title={
             <Tabs className='hide-on-small-only' onChange={this.onChangeTabs} style={tabStyle} inkBarStyle={inkBarStyle}>
+            <Tab label="home" containerElement={<Link to="/" />} />
               <Tab label="about" containerElement={<Link to="/about" />} />
               <Tab label="work" data-route="/work"  containerElement={<Link to="/work" />} />
               <Tab label="contact" containerElement={<Link to="/contact" />} />
             </Tabs>
           }
-          
           iconStyleLeft={burgerStyle}
           showMenuIconButton={false}     
           iconElementRight={ 
             <div>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-            
-            <IconButton  
-                  
-              onTouchTap={ () =>
-            this.setState({ open: !this.state.open }) }
-              > 
+              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link> 
+              <IconButton onTouchTap={ () => this.setState({ open: !this.state.open }) }> 
                 <FontIcon className="material-icons hide-on-med-and-up" color="white">menu</FontIcon>
               </IconButton>
-              </div>
+            </div>
           }
-          // iconElementLeft='muidocs-icon-navigation-expand-more'
-          // onRightIconButtonTouchTap={() =>
-          //   this.setState({ open: !this.state.open })}
         >
             
         </AppBar>
@@ -116,4 +93,4 @@ class SideNav extends Component {
   }
 }
 
-export default SideNav;
+export default Navigation;

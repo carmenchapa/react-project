@@ -8,7 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import SideNav from './components/SideNav'
+import Navigation from './components/Navigation'
 
 /* views */
 import Home from './views/Home'
@@ -34,33 +34,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-
-         
-
-           <SideNav />
-
-        <Route 
-          exact 
-          path='/' 
-          component={Home} />
-        <Route 
-          exact 
-          path='/about' 
-          component={About} 
-        />
-
-        <Route 
-          exact 
-          path='/work' 
-          component={Work} 
-        />
-
-        <Route 
-          exact 
-          path='/contact' 
-          component={Contact} 
-        />
-
+          <Navigation />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/work' component={Work} />
+          <Route exact path='/contact' component={Contact} />
       </div>
       </BrowserRouter>
       
