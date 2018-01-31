@@ -62,14 +62,6 @@ class LikeIconButton extends React.Component {
 
 			<div style={divStyle} onClick={() => this.props.increment(this.props.i)}>
 			<span style={likesStyle}>0</span>
-			{/*<IconButton 
-			  
-			  tooltip="like"
-			  tooltipPosition="bottom-center"
-			  tooltipStyles={tooltipStyles}
-			  style={iconButtonStyles}
-			  disableTouchRipple={true}
-			>*/}
 				<Favorite 
 				color={this.color} 
 				hoverColor="#ef9a9a"
