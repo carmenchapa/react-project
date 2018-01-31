@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux' 
+// import { INCREMENT_LIKES } from '../actions'
 
 // import posts from './posts'
 // import comments from './comments'
@@ -25,6 +26,6 @@ function posts(state = [], action) {
 
 // export default posts
 
-const rootReducer = combineReducers({posts})
+const rootReducer = combineReducers({posts, routing: routerReducer})
 
 export default rootReducer

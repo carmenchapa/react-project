@@ -25,19 +25,28 @@ const actionButton = {
 
 
 
-let Cards = class Cards extends Component {
+class Cards extends Component {
+	constructor(props) {
+		super(props)
+		this.clickButton = this.clickButton.bind(this)
+	}
 	
 	//  state = {}
-
+	// const clickButton = () => { 
+	// 	console.log('clicked!') 
+	// } 
+	// onClick={this.clickButton}
+	clickButton = () => console.log('clicked')
 	hoveredStyle = () => this.setState({open: false});
 	createCard (card) {
 		return (
 
 					<div className="col s12 m6 l4" key={card.code}>
-					<Card style={cardStyles}>
+					<Card style={cardStyles}  >
 					    <CardMedia>
 					    <div>
-					      <FontIcon 
+						  <FontIcon 
+						  
 					      	className="material-icons" 
 					      	color="#FFC400"
 					      	style={iconStyles} 
@@ -50,7 +59,7 @@ let Cards = class Cards extends Component {
 					    <CardText>{card.caption}</CardText>
 					    <CardActions> 
 					      <FlatButton label="Action" style={actionButton} />
-					      <LikeIconButton color="#9e9e9e" hoverColor="#ef9a9a" />    
+					      <LikeIconButton color="#9e9e9e" hoverColor="#ef9a9a" i={card.code}/>    
 					    </CardActions>
 					</Card>
 					</div>
