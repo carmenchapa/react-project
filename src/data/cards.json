@@ -1,7 +1,7 @@
 {
  "cards": [
 		{
-			"code": "1",
+			"code": "0",
 			"title": "Coding",
 			"subtitle": "Front End engineer",
 			"caption":"Javascipt developer",
@@ -9,7 +9,7 @@
 			"likes":"0"
 		},
 		{
-			"code": "2",
+			"code": "1",
 			"title": "UI/UX",
 			"subtitle": "Web layouts design",
 			"caption": "Visual designer",
@@ -17,7 +17,7 @@
 			"likes": "0"
 		},
 		{
-			"code": "3",
+			"code": "2",
 			"title": "Prototyping",
 			"subtitle": "Front End engineer",
 			"caption": "Framer, Sketch, Marvel",
@@ -25,7 +25,7 @@
 			"likes": "0"
 		},
 		{
-			"code": "4",
+			"code": "3",
 			"title": "Web design",
 			"subtitle": "Front End engineer",
 			"caption": "Wordpress, React",
@@ -33,7 +33,7 @@
 			"likes": "0"
 		},
 		{
-			"code": "5",
+			"code": "4",
 			"title": "Motion",
 			"subtitle": "Javascript motion graphics",
 			"caption": "Canvas HTML5, CreateJS, Greenshock",
@@ -41,7 +41,7 @@
 			"likes": "0"
 		},
 		{
-			"code": "6",
+			"code": "5",
 			"title": "Coding",
 			"subtitle": "Front End engineer",
 			"caption": "Pasionate about coding",
